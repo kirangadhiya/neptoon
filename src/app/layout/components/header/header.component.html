@@ -80,18 +80,24 @@
             </li> -->
             <li class="nav-item dropdown" ngbDropdown>
                 <a href="javascript:void(0)" class="nav-link" ngbDropdownToggle>
-                    <img class="user-profile" src="../../../../assets/images/logo.png"><b class="caret"></b>
+                    <img class="user-profile" src="../../../../assets/images/dashboard/profile_pic.png"><b class="caret"></b>
                 </a>
-                <div class="dropdown-menu-right custome-profile-dropdown" ngbDropdownMenu>
-                        <a class="dropdown-item" [routerLink]="['/dashboard/view-profile']">
-                                <i class="fa fa-fw fa-user"></i> {{ 'Profile' | translate }}
-                            </a>
-                            <a class="dropdown-item" [routerLink]="['/settings']">
-                                <i class="fa fa-fw fa-gear"></i> {{ 'Settings' | translate }}
-                            </a>
-                            <a class="dropdown-item" (click)="onLoggedout()">
-                                <i class="fa fa-fw fa-power-off"></i> {{ 'Log Out' | translate }}
-                            </a>
+                <div class="dropdown-menu-right custome-profile-dropdown drop-bg bg-color" ngbDropdownMenu>
+                    <div>
+                        <a class="dropdown-item border-radius m-b-5 profile-text" [routerLink]="['/dashboard/view-profile']">
+                            <img class="p-l-10" src="../../../../assets/images/dashboard/profile.png"> {{ 'Profile' | translate }}
+                        </a>
+                    </div>
+                    <div>
+                        <a class="dropdown-item border-radius m-b-5 profile-text" [routerLink]="['/settings']">
+                            <img class="p-l-10" src="../../../../assets/images/dashboard/settings.png"> {{ 'Settings' | translate }}
+                        </a>
+                    </div>
+                    <div>
+                        <a class="dropdown-item border-radius m-b-5 profile-text" (click)="onLoggedout()">
+                            <img class="p-l-10" src="../../../../assets/images/dashboard/logout.png"> {{ 'Log Out' | translate }}
+                        </a>
+                    </div>
                     <!-- <a class="dropdown-item" href="javascript:void(0)" (click)="changeLang('en')">
                         {{ 'English' | translate }}
                     </a>

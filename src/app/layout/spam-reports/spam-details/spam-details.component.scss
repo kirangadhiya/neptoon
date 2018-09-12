@@ -1,12 +1,129 @@
+
+@import '../../../../styles/utils';
 .spam-details-page{
+  .main{
+    padding: 37px;
+  }
  .box-card{
     box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.22);
+
   }
   .main-col{
     justify-content: center;
     display: flex;
+   
+  }
+  .display-flex{
+    display: flex;
+  }
+ 
+ .f-s-13{
+     font-size: 11px;
+     
+ }
+ .m-p-0{
+  margin: 0px;
+  padding: 16px;
+ }
+ .m-l-15{
+  margin: 0px;
+  margin-left: 15px;
+ }
+ .f-13{
+  font-size: 13px;
+ 
+ }
+ .p-40{
+   padding: 40px;
+ }
+ .img-width {
+  width: 100%;
+}
+ .comment-like{
+  font-size: 13px;
+  padding-top: 5px;
+  font-weight: 700;
+  .span{
+    color: $lightred;
   }
  }
- .f-s-13{
-     font-size: 14px;
+ .color-blue{
+  color: $darkblue;
  }
+ .color-gray{
+  color: $lightgray;
+ }
+ .h-30{
+   height: 30px;
+ }
+ .p-b-35{
+   padding-bottom: 35px;
+ }
+ .detais-img{
+  width: 100%;
+}
+.text-right{
+  text-align: right;
+}
+.btn-details{
+  color: $lightred;
+  /* border: 1px solid; */
+  border: 1px solid $lightred;
+  background-color: $white;
+  border-radius: 4px;
+  width: 100%;
+}
+.btn-spam{
+  background-color: $lightgreen;
+    border: none;
+    color: white;
+    width: 100%;
+    border-radius: 3px;
+}
+}
+
+.h-w-30{
+  height: 30px;
+  width: 30px;
+}
+.avaitar{
+  display: flex;
+
+
+}
+.f-14{
+  font-size: 12px;
+}
+.m-w-30{
+  max-width: 54%;
+}
+.box-border{
+ 
+ 
+  border: 1px solid;
+  border-radius: 5px
+}
+.h-w-18{
+  height: 18px;
+  width: 18px;
+  .span{
+    
+  }
+}
+.span-text{
+  padding: 22px;
+    font-weight: 700;
+}
+.f-comment{
+  
+  font-size: 10px;
+  text-align: right;
+  color:$lightgray
+}
+.p-l-30{
+  padding-left: 30px;
+}
+.bold-font{
+  padding: 0 0 0 10px;
+  font-weight: 700;
+}

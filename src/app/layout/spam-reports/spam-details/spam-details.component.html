@@ -1,8 +1,8 @@
 <div class="spam-details-page">
     <div>
         <div class="row">
-            <div class="col col-xl-12 col-lg-12 col-12">
-                <div class=" col col-lg-10 col-xl-10 col-10 box-card">
+            <div class="col col-xl-12 col-lg-12 col-12 main">
+                <div class=" col col-lg-11 col-xl-11 col-12 box-card">
                     <!-- <div>
                         <p>Back</p>
                     </div>
@@ -24,51 +24,68 @@
                                     fjgh
                                 </div>
                     </div> -->
+                    <div [routerLink]="['/spam-reports/reports']">
 
-                    <p>Back</p>
+                        <p class="color-blue"> <img src="../../../../assets/images/dashboard/back-btn.png"> Back</p>
+                    </div>
+
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-12 main-col">
-                            <div class="col col-lg-8">
+                            <div class="col col-lg-10 col-xl-10 col-12 p-40">
 
-                                <p><img src="../../../../assets//images/dashboard/user-img.png">UK Fashion Design<span>Posted
+                                <!-- <p class="f-13"><img src="../../../../assets//images/dashboard/user-img.png">UK Fashion Design<span>Posted
                                         by </span>Emma Edwards<span></span> </p>
-                                <p>40<span>mins ago</span></p>
-                                <p>What's the point of putting on makeup, a monkey is gonna stay monkey</p>
-                                <img src="../../../../assets//images/dashboard/user-details-img.png">
+                                <p class="f-s-13 color-gray">40<span>mins ago</span></p> -->
+                                <div class="display-flex">
+                                    <div>
+                                        <img src="../../../../assets//images/dashboard/user-img.png">
+                                    </div>
+                                    <div>
+                                        <p class="f-13 m-p-0">UK
+                                            Fashion Design<span>Posted
+                                                by </span>Emma Edwards<span></span> </p>
+                                        <p class="f-s-13 color-gray m-l-15">40<span>mins ago</span></p>
+                                    </div>
+
+
+                                </div>
+
+                                <p class="f-13">What's the point of putting on makeup, a monkey is gonna stay monkey</p>
+                                <img class="details-img img-width" src="../../../../assets//images/dashboard/user-details-img.jpg">
 
 
 
                                 <div class="row">
                                     <div class="col col-lg-2">
-                                        <p>1000 <span>Likes</span></p>
+                                        <p class="comment-like">1000 <span class="color-blue">Likes</span></p>
                                     </div>
-                                    <div class="col col-lg-2">
-                                        <p>5000 <span>Comments</span></p>
-                                    </div>
-                                    <div class=" col col-lg-2 ">
-                                        <p>200 <span>Shares</span></p>
+                                    <div class="col col-lg-3" (click)="comments()">
+                                        <p class="comment-like">5000 <span class="color-blue">Comments</span></p>
                                     </div>
                                     <div class=" col col-lg-2 ">
-                                        <p>20 <span>Spam</span></p>
+                                        <p class="comment-like">200 <span class="color-blue">Shares</span></p>
+                                    </div>
+                                    <div class=" col col-lg-2 ">
+
                                     </div>
                                     <div class=" col">
-                                        <p>20 <span>Spam</span></p>
+                                        <p class="comment-like text-right">20 <span class="color-blue">Spam</span></p>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col col-lg-3  ">
-                                        <button class="f-s-13" btn secondary>Delete Post</button>
+                                <div class="row p-b-35">
+                                    <div class="col col-lg-2 col-xl-2 col-12 ">
+                                        <button class="f-s-13 btn-details h-30" btn secondary>Delete Post</button>
                                     </div>
-                                    <div class="col col-lg-4">
-                                        <button class="f-s-13" btn secondary>Delete and Suspend User</button>
+                                    <div class="col col-lg-4 col-12">
+                                        <button class="f-s-13 btn-details h-30" btn secondary>Delete and Suspend User</button>
 
                                     </div>
-                                    <div class="col col-lg-4">
-                                        <button class="f-s-13" btn secondary>Delete and Suspend Forum</button>
+                                    <div class="col col-lg-4 col-12">
+                                        <button class="f-s-13 btn-details h-30 " btn secondary>Delete and Suspend Forum</button>
 
                                     </div>
-                                    <div class="col col-lg-1">
-                                        <button class="f-s-13" btn secondary>Not Spam</button>
+                                    <div class="col col-lg-2 col-12">
+                                        <button class="f-s-13 btn-spam h-30" btn secondary>Not Spam</button>
 
                                     </div>
                                 </div>
@@ -82,3 +99,52 @@
             </div>
         </div>
     </div>
+    <ng-template #commemts let-c="close" let-d="dismiss">
+        <div class="modal-header">
+            <h4 class="modal-title" id="modal-basic-title">Comments</h4>
+            <img src="assets/images/dashboard/close.png" class="close" aria-label="Close" (click)="d('Cross click')">
+            <!-- <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                    </button> -->
+        </div>
+        <div class="modal-body">
+            <div class="row main-row">
+                <div class="col col-xl-12 col-lg-12 col-12">
+                    <div  *ngFor="let i of [1,2,3,4,5]">
+                    <div class="avaitar">
+                        <img class="h-w-30" src="../../../../assets/images/dashboard/profile_pic.png">
+                        <div>
+                            <P class="bold-font">Cecilie Jones</P>
+                        </div>
+                    </div>
+                    <div class="col-10 p-l-30">
+                        <div class="f-14 m-w-54 box-border col-12">
+                            <p>It is Official wenger have resign. I will miss him after
+                                all those years at Arsenal </p>
+                            <p><img class="h-w-18" src="../../.././../assets//images/dashboard/star.png"> <span>1</span>
+                                <span class="span-text">2 replay</span></p>
+                        </div>
+                        <p class="f-comment">12:10 08/07/18</p>
+                        <!-- <div>
+                            <div class="avaitar p-l-30">
+                                <img class="h-w-30" src="../../../../assets/images/dashboard/profile_pic.png">
+                                <div>
+                                    <P>Cecilie Jones</P>
+                                </div>
+                            </div>
+                            <div class="col-10">
+                            <div class="f-14 m-w-54 box-border col-12">
+                                    <p>Admin Remove This Guy </p>
+                                    <p><img class="h-w-18" src="../../.././../assets//images/dashboard/star.png"> <span>1</span>
+                                        <span class="span-text">2 replay</span></p>
+                                </div>
+                                </div>
+                        </div> -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ng-template>

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import * as _ from 'lodash';
 import { DELETE_TITLE, DELETE_MESSAGE, UtilService, QuestionTypeService } from '../../../shared';
 import { routerTransition } from '../../../router.animations';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -14,14 +15,19 @@ import { routerTransition } from '../../../router.animations';
 export class SpamDetailsComponent implements OnInit {
     public alerts: Array<any> = [];
     public sliders: Array<any> = [];
+    @ViewChild('commemts') comment;
+    modalRef:any;
 
     constructor(
- 
+    private modalService: NgbModal,
     ) {
     }
     ngOnInit() {
         console.log("dash");
 
+    }
+    comments() {
+        this.modalRef = this.modalService.open(this.comment, { size: 'lg', windowClass: 'add-admin-model' });
     }
 
 
