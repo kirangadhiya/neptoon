@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiEndpoint: 'http://192.168.22.11:8060/api/'
+  apiEndpoint: 'http://192.168.22.19:8200/api/'
 };

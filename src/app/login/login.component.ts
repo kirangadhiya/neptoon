@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService, UtilService, EmailPattern, PasswordPattern } from '../shared';
+import { log } from 'util';
 
 @Component({
     selector: 'app-login',
@@ -29,16 +30,27 @@ export class LoginComponent implements OnInit {
     }
 
     onLoggedin() {
-        // this.isLoading = true;
-        // this.authenticationService.checkLogin(this.loginModel).subscribe(res => {
-        //     this.isLoading = false;
-        localStorage.setItem('isLoggedin', 'true');
-        setTimeout(() => {
-            this.router.navigate(['dashboard']);
-        }, 500);
-        // }, err => {
-        //     this.isLoading = false;
-        //     this._utilService.showErrorCall(err);
-        // });
+        this.isLoading = true;
+        console.log(this.loginModel);
+
+        this.authenticationService.checkLogin(this.loginModel).subscribe(res => {
+            console.log(res);
+            if (res.response_code == 0) {
+                this.isLoading = false;
+                // this._utilService.showErrorSuccess(res.message);
+                localStorage.setItem('isLoggedin', 'true');
+                localStorage.setItem('access_token', res.user_token)
+                setTimeout(() => {
+                    this.router.navigate(['dashboard']);
+                }, 500);
+            }
+            else {
+                this.isLoading = true;
+                this._utilService.showErrorCall(res.message);
+            }
+        }, err => {
+            // this.isLoading = false;
+            this._utilService.showErrorCall(err);
+        });
     }
 }

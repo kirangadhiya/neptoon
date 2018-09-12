@@ -7,7 +7,7 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
-import { SharedModule, UsersService } from '../shared';
+import { SharedModule, UsersService, AuthenticationService } from '../shared';
 
 @NgModule({
     imports: [
@@ -19,6 +19,6 @@ import { SharedModule, UsersService } from '../shared';
         LayoutRoutingModule
     ],
     declarations: [LayoutComponent, SidebarComponent, HeaderComponent],
-    providers: [UsersService]
+    providers: [UsersService, AuthenticationService]
 })
 export class LayoutModule { }

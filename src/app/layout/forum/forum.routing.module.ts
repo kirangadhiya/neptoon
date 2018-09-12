@@ -8,6 +8,7 @@ const routes: Routes = [
         children: [
             { path: '', redirectTo: 'forum-list', pathMatch: 'prefix' },
             { path: 'forum-list', loadChildren: './forum-list/forum-list.module#ForumListModule' },
+            { path: 'forum-details', loadChildren: './forum-details/forum-details.module#ForumDetailsModule' },
             // { path: 'view-profile', loadChildren: './view-profile/view-profile.module#ViewProfileModule' },
         ]
     }

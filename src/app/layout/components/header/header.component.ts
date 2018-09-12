@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
-import { UtilService, PasswordPattern, UsersService } from '../../../shared';
+import { UtilService, PasswordPattern, UsersService, AuthenticationService } from '../../../shared';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { fromEvent } from 'rxjs';
 import { map, debounceTime } from 'rxjs/operators';
@@ -32,6 +32,7 @@ export class HeaderComponent implements OnInit {
         private modalService: NgbModal,
         public utilService: UtilService,
         public usersService: UsersService,
+        public authenticationService: AuthenticationService
     ) {
 
         this.translate.addLangs(['en', 'fr', 'ur', 'es', 'it', 'fa', 'de', 'zh-CHS']);
@@ -97,9 +98,21 @@ export class HeaderComponent implements OnInit {
     }
 
     onLoggedout() {
-        this.router.navigate(['login'])
-        localStorage.removeItem('isLoggedin');
-        localStorage.removeItem('access_token');
+        this.authenticationService.logout().subscribe(res => {
+            console.log(res);
+            if (res.status == 'success') {
+                // this.utilService.showErrorSuccess(res.message);
+                this.router.navigate(['login'])
+                localStorage.removeItem('isLoggedin');
+                localStorage.removeItem('access_token');
+            }
+            else {
+                // this.utilService.showErrorCall(res.message);
+            }
+        }, err => {
+            this.isLoading = false;
+            this.utilService.showErrorCall(err);
+        });
     }
 
     changeLang(language: string) {

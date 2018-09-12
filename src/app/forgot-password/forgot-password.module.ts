@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ForgotPasswordRoutingModule } from './forgot-password-routing.module';
 import { ForgotPasswordComponent } from './forgot-password.component';
 import { NgbModalModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { UtilService, AuthenticationService } from '../shared';
 @NgModule({
   imports: [
     CommonModule,
@@ -11,6 +12,7 @@ import { NgbModalModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap'
     FormsModule,
     NgbModalModule.forRoot(),
   ],
-  declarations: [ForgotPasswordComponent]
+  declarations: [ForgotPasswordComponent],
+  providers: [UtilService, AuthenticationService]
 })
 export class ForgotPasswordModule { }

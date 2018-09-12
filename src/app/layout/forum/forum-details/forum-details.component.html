@@ -1,0 +1,118 @@
+<div class="forum-details-page">
+    <div class="row main-row">
+        <div class="col col-xl-12 col-lg-12 col-12 main-content">
+            <div class="user-cover">
+                <img src="assets/images/dashboard/profile_cover.png">
+            </div>
+            <div class="row inner-row profile-row">
+                <div class="col col-lg-11 col-xl-11 col-12 main-col">
+                    <div class="row first-row">
+                        <div class="col col-xl-4 col-lg-4 col-6 profile-col">
+                            <img src="assets/images/dashboard/profile_pic.png">
+                            <p class="user-country">Country : <span>UK</span></p>
+                        </div>
+                        <div class="col col-xl-8 col-lg-8 col-6 detail-col">
+                            <div class="user-name">
+                                <p class="user-text">Angel Lewis</p>
+                                <div>
+                                    <p class="createdat">Created by <span>Emma Edwards</span> on 19/07/2018</p>
+                                    <p class="report">Times Reported : <span>8 times</span></p>
+                                </div>
+                            </div>
+                            <p class="title-content">Interest Category : <span>Sport</span></p>
+                            <p class="title-status">Status : <span>Public</span></p>
+                            <p class="title-status">Brief Description : <span>Arsenal fans online forum</span></p>
+                            <!-- <p class="about-text">I am a friendly fun loving person essy to get along with and passionate
+                                towards success. Upcoming forex trader.</p>
+                            <p class="title-content">Interests</p>
+                            <p class="interest-text">Sports, Entertainment, Plitic</p>
+                            <p class="title-content">Contact</p>
+                            <p class="contact-text">
+                                <span class="phone">Phone: 7567093476</span>
+                                <span>Email: kirangadhiya.ibl@gmail.com</span>
+                            </p> -->
+                            <ul class="category-btn">
+                                <li class="frd-btn" (click)="activemenu('activitie')">
+                                    <button [class.active-btn]="activities">Activities</button>
+                                </li>
+                                <li class=" forum-btn " (click)="activemenu( 'member') ">
+                                    <button [class.active-btn]="member">Member</button>
+                                </li>
+                                <li class="suspend-btn">
+                                    <button>Suspend</button>
+                                </li>
+                                <li class="deactivate-btn ">
+                                    <button>Remove</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row inner-row activites-list">
+                <div class="col col-lg-11 col-xl-11 col-12 main-col ">
+                    <div class="row second-row ">
+                        <div class="table-responsive tabel-overflow tabel-box">
+                            <table class="table" *ngIf="member">
+                                <thead>
+                                    <tr class="tr-header-center">
+                                        <th class="member-th">Members ( 30 )</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th>Times Reported</th>
+                                        <th>Country</th>
+                                        <th>View User</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="tr-body-center" *ngFor="let user of [0,1,2,3,4,5,6];let i=index;">
+                                        <td class="user-profile">
+                                            <img src="assets/images/dashboard/profile_pic.png">
+                                        </td>
+                                        <td>
+                                            <p class="user-name">Emma Edwards</p>
+
+                                        </td>
+                                        <td>
+                                            <p>
+                                                Member
+                                            </p>
+                                        </td>
+                                        <td>
+                                            <p>2</p>
+                                        </td>
+                                        <td>
+                                            <p>US</p>
+                                        </td>
+                                        <td>
+                                            <button class="btn secondary view-btn">View User</button>
+                                            <!-- <button class="btn secondary details-btn" [routerLink]="['/users-details']">DETAILS</button> -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div *ngIf="activities" class="activite-list-profile">
+                                <div class="row">
+                                    <div class="col col-lg-12 col-xl-12 col-md-12 col-12 profile-post">
+                                        <div class="col col-lg-8 col-xl-8 col-md-8 col-12">
+                                            <!-- <div class="userprofile-detail">
+                                                <div>
+                                                    <img src="assets/images/dashboard/profile_pic.png">
+                                                </div>
+                                                <div>
+                                                    <p>Emma Edwards</p>
+                                                    <p>4 mins ago</p>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -49,15 +49,15 @@
                         <div class="col-lg-4 col-md-12 col-12">
                             <div class="middle">
                                 <label class="label">Select by date</label>
-                                <input class="form-control form-date m-l-10 date-picker" placeholder="yyyy-mm-dd" name="dp"
-                                    [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
-                                    <img class="m-l-10" (click)="d.toggle()" src="../../../../assets//images/dashboard/calender.png">
+                                <input class="form-control form-date m-l-10 date-picker" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker
+                                    #d="ngbDatepicker">
+                                <img class="m-l-10" (click)="d.toggle()" src="../../../../assets//images/dashboard/calender.png">
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 col-12">
                             <div class="row">
                                 <div class="middle">
-                                    <label  class="label">Select by Country</label>
+                                    <label class="label">Select by Country</label>
                                     <select class="form-control select-input" name="roleId">
                                         <option value="none">All</option>
                                         <option value="uk">UK</option>
@@ -70,7 +70,7 @@
                         <div class="col-lg-4 col-md-12 col-12">
                             <div class="row">
                                 <div class="middle">
-                                    <label  class="label">Sort</label>
+                                    <label class="label">Sort</label>
                                     <select class="form-control select-input" name="roleId">
                                         <option value="none">Catagory</option>
                                         <option value="uk">One</option>
@@ -145,7 +145,7 @@
                                 <p>US</p>
                             </td>
                             <td>
-                                <button class="btn secondary details-btn">DETAILS</button>
+                                <button class="btn secondary details-btn" [routerLink]="['/forum/forum-details']">DETAILS</button>
                             </td>
                         </tr>
                     </tbody>

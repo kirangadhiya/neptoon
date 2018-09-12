@@ -1,0 +1,256 @@
+@import '../../../../styles//utils';
+.forum-details-page {
+    .main-row {
+        margin: 0;
+        padding: 24px;
+        .activites-list {
+            padding-top: 175px;
+        }
+        .user-cover {
+            width: 100%;
+            img {
+                width: 100%;
+                height: 160px;
+            }
+        }
+        .inner-row {
+            margin: 0;
+            justify-content: center;
+            .main-col {
+                .first-row {
+                    box-shadow: 0 1px 6px rgba(10, 10, 10, 0.64);
+                    background-color: $white;
+                    padding: 25px;
+                    .detail-col {
+                        .user-name {
+                            display: flex;
+                            justify-content: space-between;
+                            .user-text {
+                                font-size: 18px;
+                                font-weight: 700;
+                                color: $lightblack;
+                                margin: 0;
+                            }
+                            .createdat {
+                                font-size: 12px;
+                                color: $lightgray;
+                                margin-bottom: 6px;
+                                span {
+                                    color: $lightblack;
+                                    font-weight: 500;
+                                }
+                            }
+                            .report {
+                                color: $lightblack;
+                                span {
+                                    color: $lightred;
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                        .title-content {
+                            color: $lightgray;
+                            margin-bottom: 5px;
+                            font-size: 14px;
+                            font-weight: 500;
+                            span {
+                                color: $darkblue;
+                                font-weight: 700;
+                            }
+                        }
+                        .title-status {
+                            color: $lightgray;
+                            margin-bottom: 5px;
+                            font-size: 14px;
+                            font-weight: 500;
+                            span {
+                                color: $lightblack;
+                                font-weight: 700;
+                            }
+                        }
+                        .about-text {
+                            font-size: 13px;
+                            color: $lightblack;
+                        }
+                        .interest-text {
+                            color: $lightblack;
+                            font-size: 13px;
+                            font-weight: 700;
+                        }
+                        .contact-text {
+                            color: $lightblack;
+                            font-size: 13px;
+                            .phone {
+                                padding-right: 50px;
+                            }
+                        }
+                        .category-btn {
+                            list-style: none;
+                            display: flex;
+                            justify-content: space-between;
+                            padding: 0;
+                            margin: 0;
+                            .active-btn {
+                                color: $white !important;
+                                background: $darkblue !important;
+                                border-color: $darkblue !important;
+                            }
+                            .frd-btn {
+                                button {
+                                    background-color: $white;
+                                    box-shadow: none;
+                                    border: 1px solid $lightgray;
+                                    border-radius: 3px;
+                                    font-size: 13px;
+                                    padding: 6px 20px;
+                                    color: $lightgray;
+                                    cursor: pointer;
+                                }
+                            }
+                            .forum-btn {
+                                button {
+                                    background-color: $white;
+                                    box-shadow: none;
+                                    border: 1px solid $lightgray;
+                                    border-radius: 3px;
+                                    font-size: 13px;
+                                    padding: 6px 20px;
+                                    color: $lightgray;
+                                    cursor: pointer;
+                                }
+                            }
+                            .activity-btn {
+                                button {
+                                    background-color: $white;
+                                    box-shadow: none;
+                                    border: 1px solid $lightgray;
+                                    border-radius: 3px;
+                                    font-size: 13px;
+                                    padding: 6px 20px;
+                                    color: $lightgray;
+                                    cursor: pointer;
+                                }
+                            }
+                            .suspend-btn {
+                                button {
+                                    background-color: $white;
+                                    box-shadow: none;
+                                    border: 1px solid $lightred;
+                                    border-radius: 3px;
+                                    font-size: 13px;
+                                    padding: 6px 20px;
+                                    color: $lightred;
+                                    cursor: pointer;
+                                }
+                            }
+                            .deactivate-btn {
+                                button {
+                                    background-color: $white;
+                                    box-shadow: none;
+                                    border: 1px solid $lightred;
+                                    border-radius: 3px;
+                                    font-size: 13px;
+                                    padding: 6px 20px;
+                                    color: $lightred;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+                .second-row {
+                    box-shadow: 0 1px 6px rgba(10, 10, 10, 0.64);
+                    height: 100%;
+                    .table-responsive {
+                        padding: 8px 20px;
+                        .user-profile {
+                            // text-align: right;
+                        }
+                        .tr-header-center {
+                            .member-th {
+                                text-align: right;
+                            }
+                        }
+                        .user-name {
+                            font-weight: 700;
+                        }
+                        .Count {
+                            font-weight: 700;
+                        }
+                        th {
+                            border: none;
+                        }
+                        tr {
+                            align-items: center;
+                            text-align: center;
+                        }
+                        td {
+                            border: none;
+                            img {
+                                width: 40px;
+                                height: 40px;
+                            }
+                            p {
+                                margin: 0;
+                            }
+                        }
+                    }
+                    .activite-list-profile {
+                        .profile-post {
+                            display: flex;
+                            justify-content: center;
+                            .userprofile-detail {
+                                display: flex;
+                            }
+                        }
+                    }
+                }
+                .view-btn {
+                    color: $white;
+                    background-color: $lightgreen;
+                    font-size: 12px;
+                }
+            }
+            .profile-col {
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+                .join-text {
+                    padding-top: 20px;
+                }
+                .total-frd {
+                    margin: 0;
+                    font-weight: 700;
+                }
+                .user-country {
+                    padding-top: 12px;
+                    color: $lightgray;
+                    font-size: 14px;
+                    span {
+                        font-weight: 700;
+                        color: $lightblack;
+                    }
+                }
+            }
+            .frd-count {
+                padding-top: 260px;
+                font-weight: 700;
+                font-size: 20px;
+            }
+        }
+        .main-content {
+            padding: 0; // box-shadow: 0 1px 6px rgba(10, 10, 10, 0.64);
+            position: relative;
+            .profile-row {
+                position: absolute;
+                top: 80px;
+                z-index: 9;
+                width: 100%;
+            }
+        }
+    }
+}

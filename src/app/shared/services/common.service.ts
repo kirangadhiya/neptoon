@@ -19,8 +19,21 @@ export class CommonAPIService {
     }
 
     public getAdminHeaders(): HttpHeaders {
-        this._adminHeaders = new HttpHeaders({ 'Authorization': 'Bearer ' + localStorage.getItem('access_token') });
-        return this._adminHeaders;
+        console.log(localStorage.getItem('access_token'));
+        if (localStorage.getItem('access_token')) {
+            this._adminHeaders = new HttpHeaders({
+                'Authentication': localStorage.getItem('access_token')
+                // 'Authentication': 'Bearer ' + localStorage.getItem('access_token')
+            });
+            return this._adminHeaders;
+        }
+        else {
+            this._adminHeaders = new HttpHeaders({
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            })
+
+        }
     }
 
     private getUrlSearchParams(object): URLSearchParams {

@@ -10,7 +10,19 @@ export class AuthenticationService {
     }
 
     public checkLogin(data: any) {
-        return this.commonApiService.post('v1/Account', data);
+        return this.commonApiService.post('auth/login', data);
+    }
+    public ForgotpasswordUsingemail(data: any) {
+        return this.commonApiService.post('auth/verify', data);
+    }
+    public verifyotp(data: any) {
+        return this.commonApiService.post('auth/verifyotp', data);
+    }
+    public passwordreset(data: any) {
+        return this.commonApiService.post('users/resetpassword', data);
+    }
+    public logout() {
+        return this.commonApiService.get('auth/logout');
     }
 
 }
