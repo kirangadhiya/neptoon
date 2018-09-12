@@ -1,0 +1,109 @@
+
+@import '../../../../styles//utils';
+
+.user-list-page{
+
+    .tabel-overflow{
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .padding_20{
+        padding: 20px;
+    }
+    .tabel-box{
+        box-shadow: 0 1px 6px rgba(10, 10, 10, 0.64);
+        // padding: 10px 10px 10px 8px;
+        padding: 15px;
+      .tr-header-center{
+        text-align: center;
+      }
+      .tr-body-center{
+          text-align: center;
+          font-size: 12px;
+          color: $lightblack;
+      }
+        th{
+        font-size: 14px;
+        color: $lightgray;
+        border-top: none;
+        text-align: left;
+        padding: 10px 5px;
+      }
+      td{
+          text-align: left;
+          padding: 10px 5px;
+      }
+      
+    }
+    .details-btn{ 
+       background-color: $lightgreen;
+       width: 100px;
+       color:$white;
+       border: none;
+      font-size: 12px;
+      font-weight: 700;
+      }
+
+ 
+    .header-section{
+        padding: 10px 0px;
+        .active-button{
+            background-color: #283593;
+            border: 1px solid #283593;
+            font-size: 13px;
+            border-radius: 5px;
+            padding: 4px 20px;
+            color: white;
+            font-weight: 600;
+        }
+        .normal-button{
+            border: 1px solid $lightgray;
+            background-color: white;
+            color: $lightgray;
+            font-size: 12px;
+            border-radius: 5px;
+            padding: 4px 13px;
+            font-weight: 600;
+        }
+        .card{
+            padding: 8px;
+            box-shadow: 0 1px 6px rgba(10, 10, 10, 0.64);
+            text-align: center;
+        }
+        .row-section{
+            padding: 10px 20px;
+            .button-section{
+                align-items: flex-end;
+                display: flex;
+            }
+        }
+        .middle{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            .date-picker{
+                width: 50%;
+                height: 30px;
+                padding: 8px 12px;
+                font-size: 13px;
+                margin: 0px 10px;
+            }
+            .label{
+                color: gray;
+                font-size: 13px;
+                margin: 0;
+            }
+            .select-input{
+                width: 50%;
+                margin:0px 10px;
+                height: 30px;
+                font-size: 12px;
+                padding: 5px;
+            }
+        }
+    }
+
+    .margin_0{
+        margin: 0px;
+    }
+}

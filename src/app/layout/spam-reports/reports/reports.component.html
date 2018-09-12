@@ -1,0 +1,85 @@
+<div class="reports-page">
+    <!-- <div>
+        <p>REPORTS</p>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-lg-4">
+   
+            </div>
+        </div>
+    </div> -->
+    <div class="row">
+        <div class="col-lg-10 col-sm-12 report-card">
+            <p class="">REPORTS</p>
+            <!-- <div class="row">
+                <div class="col-lg-4 col-md-4 col-12 header">
+                       <p class="date">Select by date </p> 
+                        <input class="form-control  " placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model"
+                            ngbDatepicker #d="ngbDatepicker">
+                            <img class="" (click)="d.toggle()" src="../../../../assets//images/dashboard/calender.png">
+                </div>
+                <div class="col-lg-4 col-md-4 col-12 header">
+                        Sort<select class="select-class m-l-10">
+                                <option class="select-class" selected>Date</option>
+                                <option class="select-class">No of Reports</option>
+                                <option class="select-class">Post of shares</option>
+                            </select>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-12 header">
+                            <p>
+                                    1200000000
+                                </p>
+                                <p>
+                                    Reports
+                                </p>
+                        </div>
+            </div> -->
+            <!-- <ul class="head-list">
+                <li class="date ">Select by date
+                    <input class="form-control form-date m-l-10" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model"
+                        ngbDatepicker #d="ngbDatepicker"> -->
+                    <!-- <input type="date" placeholder="/ / "> -->
+                    <!-- <img class="m-l-10" (click)="d.toggle()" src="../../../../assets//images/dashboard/calender.png">
+                </li>
+                <li class="date">Sort<select class="select-class m-l-10">
+                        <option class="select-class" selected>Date</option>
+                        <option class="select-class">No of Reports</option>
+                        <option class="select-class">Post of shares</option>
+                    </select></li>
+                <li>
+                    <div>
+                        <p>
+                            1200000000
+                        </p>
+                        <p>
+                            Reports
+                        </p>
+
+                    </div>
+
+                </li>
+            </ul> -->
+            <div class="reports-box">
+                <div class="row report-row" *ngFor="let i of [1,2,3,4]">
+                    <div class="col-lg-4">
+                        <p class="report-text">Post ID : <span>uk13212456</span></p>
+                        <P class="report-text-repot">Wenger resign &gt; <span>Emma Edwards</span></P>
+                        <p class="report-text-spam">Spam reported:<span class="spam-time-text">20 TImes</span></p>
+                    </div>
+                    <div class="col-lg-3 col-time-text">
+                        <p class="report-time-text">12:00 AM <span>11/08/2018</span></p>
+                    </div>
+                    <div class="col-lg-2">
+                        <p class="report-time-text">15 Shares</p>
+                    </div>
+                    <div class="col-lg-3">
+                            <button class="btn btn-secondary details-btn" [routerLink]="['/spam-reports/spam-details']" >DETAILS</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

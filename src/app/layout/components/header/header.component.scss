@@ -1,0 +1,58 @@
+$topnav-background-color: #222;
+@import '../../../../styles/utils';
+:host {
+    .navbar {
+        background-color: $white;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.19), 0 1px 2px rgba(0, 0, 0, 0.23);
+        .navbar-brand {
+            color: #fff;
+        }
+        .nav-item>a {
+            color: #999;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    .dropdown-menu-right {
+        min-width: 170px;
+    }
+    .header-user-menu {
+        left: -12px !important;
+    }
+    .header-user-menu a {
+        padding: 0.5px !important;
+    }
+    .messages {
+        width: 300px;
+        .media {
+            border-bottom: 1px solid #ddd;
+            padding: 5px 10px;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        .media-body {
+            h5 {
+                font-size: 13px;
+                font-weight: 600;
+            }
+            .small {
+                margin: 0;
+            }
+            .last {
+                font-size: 12px;
+                margin: 0;
+            }
+        }
+    }
+}
+.user-profile{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.custome-profile-dropdown{
+    left: auto !important;
+    min-width: 250px !important;
+}

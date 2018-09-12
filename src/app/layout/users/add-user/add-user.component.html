@@ -1,0 +1,84 @@
+<div>
+    <h4>
+        <a class="btn btn-success btn-lg back" backDirection>
+            <span class="fa fa-arrow-left"></span>
+        </a>
+        <span *ngIf="isEditView">Edit</span><span *ngIf="!isEditView">Add</span> User
+    </h4>
+    <div class="row">
+        <div class="col col-xl-6 col-lg-12">
+            <form class="form-horizontal noon-form" #manageUserForm="ngForm" (ngSubmit)="manageUserForm.form.valid && manageUser()">
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="email">User type:</label>
+                    <div class="col col-sm-8">
+                        <select class="form-control" name="roleId" [(ngModel)]="userModel.roleId" required>
+                            <option [value]=undefined disabled>Select Role</option>
+                            <option *ngFor="let role of userRoles" [value]="role.id">{{role.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="username">Username:</label>
+                    <div class="col col-sm-8">
+                        <input type="text" class="form-control" placeholder="Enter Username"
+                            name="username" [(ngModel)]="userModel.username" #username="ngModel" required>
+                        <div *ngIf="username.invalid && (username.touched || manageUserForm.submitted)">
+                            <p class="input-info error-message" *ngIf="username.errors.required">username is required</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="email">Email:</label>
+                    <div class="col col-sm-8">
+                        <input type="email" [disabled]="isEditView" class="form-control" placeholder="Enter email"
+                            [pattern]="emailPattern" name="email" [(ngModel)]="userModel.email" #email="ngModel"
+                            required>
+                        <div *ngIf="email.invalid && (email.touched || manageUserForm.submitted)">
+                            <p class="input-info error-message" *ngIf="email.errors.required">Email is required</p>
+                            <p class="input-info error-message" *ngIf="email.errors.pattern">Email is not valid.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="pwd">Password:</label>
+                    <div class="col col-sm-8">
+                        <input type="password" class="form-control" placeholder="Enter password" title="Use 8 or more characters with a mix of letters, numbers & symbols"
+                            name="password" [(ngModel)]="userModel.password" #password="ngModel" [required]="!isEditView">
+                        <!-- [pattern]="passwordPattern" -->
+                        <div *ngIf="password.invalid && (password.touched || manageUserForm.submitted)">
+                            <p class="input-info error-message" *ngIf="password.errors.required">Password is required</p>
+                            <p class="input-info error-message" *ngIf="password.errors.pattern">Password must contain 8
+                                or
+                                more characters with a mix of letters, numbers & symbols.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-4" for="pwd">Confirm Password:</label>
+                    <div class="col col-sm-8">
+                        <input type="password" class="form-control" name="confirmPassword" [(ngModel)]="userModel.confirmPassword"
+                            placeholder="Confirm Password" #confirmPassword="ngModel" [required]="!isEditView">
+                        <div *ngIf="(password.touched || manageUserForm.submitted)">
+                            <p class="input-info error-message" *ngIf="userModel.password && (userModel.password !== userModel.confirmPassword)">
+                                Password and confirm password not matches.
+                            </p>
+                            <p class="input-info success-message" *ngIf="userModel.password && (userModel.password == userModel.confirmPassword)">
+                                Password and confirm password matches.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-8 pull-right">
+                        <button type="submit" class="btn btn-default m-r-20px" *ngIf="isEditView" [disabled]="userModel.password !== userModel.confirmPassword">Edit
+                            user</button>
+                        <button type="submit" class="btn btn-default m-r-20px" *ngIf="!isEditView" [disabled]="manageUserForm.invalid || (userModel.password !== userModel.confirmPassword)">Add
+                            user
+                        </button>
+                        <button class="btn btn-danger" backDirection>Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

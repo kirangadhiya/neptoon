@@ -1,0 +1,126 @@
+// margin section
+$darkblue : #283593;
+$lightblue :  #6494ED;
+$darkyellow : #FFCA28;
+$lightgray :#bdbdbd;
+$lightblack : #424242;
+$lightvoilet : #9963EE;
+$lightgreen : #56CFA1;
+$lightred : #f05348;
+$white : #ffff;
+
+.m-r-20px {
+    margin-right: 20px;
+}
+
+// padding section
+.no-padding {
+    padding: 0px;
+}
+
+.no-margin {
+    margin: 0px;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+
+//avatar
+
+.avatar {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    max-width: 100px;
+    margin: 0 auto;
+    padding: 5px;
+    img.user-avatar {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    .edit-pic {
+        position: absolute;
+        top: 10px;
+        right: 0;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background: rgba(0, 0, 0, 0.85);
+        color: white;
+        padding-top: 2px;
+        cursor: pointer;
+    }
+}
+
+//feedback
+.noon-container{
+    margin: 8px;
+    border: 1px solid #e5e5e5;
+    padding: 15px;
+}
+
+.drop-file .drop-zone .content,
+.drop-file .drop-zone{
+    height: 60px !important;
+}
+
+.drop-file .drop-zone{
+    border: 2px solid #0782d0 !important;
+    border-radius: 0px;
+}
+// add admin model 
+.add-admin-model{
+    .modal-dialog{
+    .modal-content{
+        background-color: transparent !important;
+        border: none;
+        .modal-header{
+            background-color: transparent;
+            border: none;
+            padding: 1rem 0;
+            .modal-title{
+                color: $white;
+    font-weight: 700;
+            }
+        }
+        .modal-body{
+            background-color: $white;
+            border-radius: 0.3rem;
+            .main-row{
+                margin: 0;
+                padding: 20px;
+                .custome-input{
+                    width: 100%;
+                    height: 35px;
+                }
+                .input-title{
+                    font-size: 16px;
+                font-weight: 700;
+                margin-bottom: 0.6rem;
+                color: $lightblack;
+                }
+                .font-siz{
+                    font-size: 15px;
+                }
+                .row-input{
+                    padding-bottom: 20px;
+                }
+                .submit-btn{
+                    text-align: center;
+                    padding-top: 30px;
+                }
+                .details-btn{
+                    color: $white;
+                    background-color: $lightgreen;
+                    height: 34px;
+                }
+                
+            }
+        }
+    }
+}
+}
