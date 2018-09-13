@@ -76,7 +76,7 @@ export class ForgotPasswordComponent implements OnInit {
         });
     }
     Resetpassword() {
-        this.authenticationService.passwordreset({ 'password': this.PasswordModel.password, 'email': this.forgotPasswordModel.email }).subscribe(res => {
+        this.authenticationService.passwordreset({ 'password': this.PasswordModel.password, 'email': this.forgotPasswordModel.email, 'confirm_password': this.PasswordModel.confirmPassword }).subscribe(res => {
             console.log(res);
             this.router.navigate(['/login'])
             // this._utilService.showErrorSuccess(res.message);

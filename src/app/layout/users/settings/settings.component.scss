@@ -1,49 +1,43 @@
-
 @import '../../../../styles//utils';
-
-.user-list-page{
-
-    .tabel-overflow{
+.user-list-page {
+    .tabel-overflow {
         overflow-x: auto;
         overflow-y: hidden;
     }
-    .tabel-box{
+    .tabel-box {
         box-shadow: 0 1px 6px rgba(10, 10, 10, 0.64);
         padding: 15px;
-      .tr-header-center{
-        text-align: center;
-      }
-      .tr-body-center{
-          text-align: center;
-          font-size: 12px;
-          color: $lightblack;
-      }
-      th{
-        font-size: 14px;
-        color: $lightgray;
-        border-top: none;
-        text-align: left;
-        padding: 10px 5px;
-      }
-      td{
-          text-align: left;
-          padding: 10px 5px;
-      }
-      
+        .tr-header-center {
+            text-align: center;
+        }
+        .tr-body-center {
+            text-align: center;
+            font-size: 12px;
+            color: $lightblack;
+        }
+        th {
+            font-size: 14px;
+            color: $lightgray;
+            border-top: none;
+            text-align: left;
+            padding: 10px 5px;
+        }
+        td {
+            text-align: left;
+            padding: 10px 5px;
+        }
     }
-    .details-btn{
-             
-       background-color: $lightgreen;
-       width: 100px;
-       color:$white;
-       border: none;
-      font-size: 12px;
-      font-weight: 700;
-      }
-
-      .header-section{
+    .details-btn {
+        background-color: $lightgreen;
+        width: 100px;
+        color: $white;
+        border: none;
+        font-size: 12px;
+        font-weight: 700;
+    }
+    .header-section {
         padding: 10px 0px;
-        .active-button{
+        .active-button {
             background-color: #283593;
             border: 1px solid #283593;
             font-size: 13px;
@@ -51,9 +45,8 @@
             padding: 4px 20px;
             color: white;
             font-weight: 600;
-          
         }
-        .normal-button{
+        .normal-button {
             border: 1px solid $lightgray;
             background-color: white;
             color: $lightgray;
@@ -62,102 +55,100 @@
             padding: 4px 13px;
             font-weight: 600;
         }
-        .new-admin{
+        .new-admin {
             text-align: right;
         }
-        .card{
+        .card {
             padding: 8px;
             box-shadow: 0 1px 6px rgba(10, 10, 10, 0.64);
             text-align: center;
         }
-        .active-button-admin{
+        .active-button-admin {
             background: white;
             border: 1px solid #283593;
-            color:#283593;
+            color: #283593;
             font-size: 13px;
             border-radius: 3px;
         }
-        .row-section{
+        .row-section {
             padding: 10px 20px;
-            .button-section{
+            .button-section {
                 align-items: flex-end;
-              
             }
-            .border-bottom{
+            .border-bottom {
                 border-bottom: 1px solid gray;
             }
-            .input-admin{
+            .input-admin {
                 border: none;
-               
                 padding: 0px 0px 1px 21px;
             }
-            .img-search{
+            .img-search {
                 position: absolute;
-                top:6px;
+                top: 6px;
                 bottom: 6px;
             }
         }
-        .middle{
+        .middle {
             display: flex;
             align-items: center;
             width: 100%;
-            .date-picker{
+            .date-picker {
                 width: 50%;
                 height: 30px;
                 padding: 8px 12px;
                 font-size: 13px;
                 margin: 0px 10px;
             }
-            .label{
+            .label {
                 color: gray;
                 font-size: 13px;
                 margin: 0;
             }
-            .select-input{
+            .select-input {
                 width: 50%;
-                margin:0px 10px;
+                margin: 0px 10px;
                 height: 30px;
                 font-size: 12px;
                 padding: 5px;
             }
         }
     }
-
-    .margin_0{
+    .margin_0 {
         margin: 0px;
     }
-
-  
 }
-.password-col{
+
+.password-col {
     justify-content: center;
     display: flex;
 }
-.cancle-btn{
-    float:right;
-    background-color:lightcoral;
+
+.cancle-btn {
+    float: right;
+    background-color: lightcoral;
     color: $white;
     border: none;
 }
-.btn-submit{
+
+.btn-submit {
     text-align: center;
 }
-.update-btn{
+
+.update-btn {
     margin-right: 15px;
-    background-color:$lightgreen;
+    background-color: $lightgreen;
     color: $white;
     border: none;
 }
-.f-weight{
-    font-weight: 700;
 
+.f-weight {
+    font-weight: 700;
 }
-.f-15{
+
+.f-15 {
     font-size: 15px;
-}
-  /////////// check box
-    
-  .container {
+} /////////// check box
+.container {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -171,6 +162,7 @@
 }
 
 /* Hide the browser's default checkbox */
+
 .container input {
     position: absolute;
     opacity: 0;
@@ -178,6 +170,7 @@
 }
 
 /* Create a custom checkbox */
+
 .checkmark {
     position: absolute;
     top: 0;
@@ -185,20 +178,23 @@
     height: 23px;
     width: 23px;
     background-color: #eee;
-    border-radius : 30px;
+    border-radius: 30px;
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+
+.container:hover input~.checkmark {
     background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
+
+.container input:checked~.checkmark {
     background-color: $darkblue;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
+
 .checkmark:after {
     content: "";
     position: absolute;
@@ -206,11 +202,13 @@
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+
+.container input:checked~.checkmark:after {
     display: block;
 }
 
 /* Style the checkmark/indicator */
+
 .container .checkmark:after {
     left: 9px;
     top: 5px;
@@ -221,4 +219,10 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+.admin-input {
+    padding-left: 15px;
+    border-radius: 3px;
+    border: 1px solid $lightgray;
 }

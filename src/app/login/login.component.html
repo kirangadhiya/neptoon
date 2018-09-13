@@ -22,9 +22,10 @@
                         <div class="form-group">
                             <label class="user_name">Password</label>
 
-                            <input type="password" name="password" class="form-control input-underline input-lg" [(ngModel)]="loginModel.password" placeholder="Password"
+                            <input type="text" name="password" class="form-control input-underline input-lg" [(ngModel)]="loginModel.password" placeholder="Password"
                                 #password="ngModel" required>
-                            <img class="login-eye" src="../../assets//images/login/login-eye.png">
+                            <img class="login-eye" src="../../assets//images/login/login-eye.png" (click)="viewpassword =! viewpassword">
+                            <!-- <img class="show-pass" src="../../assets//images/login/show-pass.png" (click)="viewpassword =! viewpassword" *ngIf="viewpassword"> -->
                             <div *ngIf="password.invalid && (password.touched || loginForm.submitted)">
                                 <p class="input-info error-message" *ngIf="password.errors.required">Password is required
                                 </p>

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SettingsRoutingModule } from './settings-routing.module';
 import { SettingsComponent } from './settings.component';
-import { PageHeaderModule, CommonDialogModule, UsersService, SharedModule } from '../../../shared';
+import { PageHeaderModule, CommonDialogModule, UsersService, SharedModule, SettingService } from '../../../shared';
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -17,9 +17,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         SettingsRoutingModule,
         NgbModule.forRoot(),
         FormsModule
-        
+
     ],
     declarations: [SettingsComponent],
-    providers: [UsersService]
+    providers: [UsersService, SettingService]
 })
 export class SettingsModule { }

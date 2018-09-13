@@ -1,6 +1,4 @@
-
 @import '../../styles/utils';
-
 $topnav-background-color: #222;
 :host {
     display: block;
@@ -12,18 +10,15 @@ $topnav-background-color: #222;
     left: 0;
     right: 0;
     bottom: 0;
-    overflow: auto;
-    // background: url('assets/images/login-register.jpg');
+    overflow: auto; // background: url('assets/images/login-register.jpg');
     text-align: center;
     color: $lightblack;
     padding: 3em;
     background-size: cover;
-    
     .col-lg-6 {
         padding: 0;
-             
     }
-    p.heading-text{
+    p.heading-text {
         width: 100%;
         height: 33px;
         color: $lightblack;
@@ -34,20 +29,19 @@ $topnav-background-color: #222;
         text-transform: none;
         text-decoration: none;
         letter-spacing: 0.5803573px;
-      font: bold;
+        font: bold;
     }
-    .login-form{
-        background-color:$white;
-         border-radius: 5px;
+    .login-form {
+        background-color: $white;
+        border-radius: 5px;
         box-shadow: 0 1px 6px rgba(10, 10, 10, 0.64);
     }
-    .user_name{
+    .user_name {
         float: left;
         color: $lightblack;
         font-weight: 600;
         font-size: 16px;
         margin: 0;
-        
     }
     .input-lg {
         height: 46px;
@@ -55,12 +49,22 @@ $topnav-background-color: #222;
         font-size: 15px;
         line-height: 1.3333333;
         border-radius: 0;
-        
     }
-    .login-eye{
+    .login-eye {
         position: absolute;
         right: 0;
-        top: 25px;
+        top: 40px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+    .show-pass {
+        position: absolute;
+        top: 43px;
+        width: 20px;
+        height: 20px;
+        right: 2px;
+        cursor: pointer;
     }
     .input-underline {
         background: 0 0;
@@ -88,7 +92,6 @@ $topnav-background-color: #222;
         width: 360.97px;
         height: 57px;
         border-radius: 30px;
-        
     }
     .rounded-btn:hover,
     .rounded-btn:focus,
@@ -107,7 +110,7 @@ $topnav-background-color: #222;
             color: rgba(255, 255, 255, 0.7);
         }
     }
-    .form{
+    .form {
         padding: 16px 45px 20px
     }
     .form-group {
@@ -115,13 +118,10 @@ $topnav-background-color: #222;
         position: relative;
         input::-webkit-input-placeholder {
             color: lightgray !important;
-            
         }
-         .input-underline{
-             padding-left: 0px;
-        
-
-         }
+        .input-underline {
+            padding-left: 0px;
+        }
         input:-moz-placeholder {
             /* Firefox 18- */
             color: lightgray !important;
@@ -130,37 +130,34 @@ $topnav-background-color: #222;
         input::-moz-placeholder {
             /* Firefox 19+ */
             color: lightgray !important;
-            
         }
         input:-ms-input-placeholder {
             color: lightgray !important;
-           
         }
     }
     .form-content {
         padding: 15px 0;
-       
     }
     .user-avatar {
         -webkit-border-radius: 50%;
         border-radius: 50%;
         border: 2px solid #fff;
     }
-
-    p.link{
+    p.link {
         color: $darkblue;
         font-size: 14px;
         font-style: normal;
         font-stretch: normal;
         font-weight: 400;
-       text-align: left;
+        text-align: left;
         text-transform: none;
         text-decoration: none;
         letter-spacing: 0.35px;
+        cursor: pointer;
     }
-   
 }
-.simple-header{
+
+.simple-header {
     background-color: $white;
     position: fixed;
     width: 100%;
@@ -169,5 +166,3 @@ $topnav-background-color: #222;
     height: 60px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.19), 0 1px 2px rgba(0, 0, 0, 0.23)
 }
-
-

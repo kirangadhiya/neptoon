@@ -9,3 +9,4 @@ export * from './question-type.services';
 export * from './questions.services';
 export * from './files.services';
 export * from './users.services';
+export * from './setting.services';

@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
     public emailPattern: string = EmailPattern;
     public passwordPattern: string = PasswordPattern;
     public isLoading: boolean = false;
+    public viewpassword: boolean = true;
     constructor(
         public router: Router,
         private authenticationService: AuthenticationService,
@@ -48,8 +49,9 @@ export class LoginComponent implements OnInit {
                 this.isLoading = false;
                 this._utilService.showErrorCall(res.message);
             }
+            this.isLoading = false;
         }, err => {
-            // this.isLoading = false;
+            this.isLoading = false;
             this._utilService.showErrorCall(err);
         });
     }

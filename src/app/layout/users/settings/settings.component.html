@@ -158,37 +158,30 @@
                                 <div class="form-content">
                                     <div class="form-group">
                                         <label class="user_name f-15 f-weight">Old Password</label>
-                                        <input type="password" class="form-control input-underline input-lg f-15"
-                                            [pattern]="passwordPattern" placeholder="Old password" name="opassword"
-                                            [(ngModel)]="changePwd.opassword" #opassword="ngModel" required>
+                                        <input type="password" class="form-control input-underline input-lg f-15" [pattern]="passwordPattern" placeholder="Old password"
+                                            name="opassword" [(ngModel)]="changePwd.opassword" #opassword="ngModel" required>
                                         <div *ngIf="opassword.invalid && (opassword.touched || changePwd.submitted)">
                                             <p class="input-info error-message" *ngIf="opassword.errors.required">
-                                               Old  Password
-                                                is
-                                                required</p>
-                                       
+                                                Old Password is required
+                                            </p>
+
                                         </div>
                                         <label class="user_name f-15 f-weight">New Password</label>
-                                        <input type="password" class="form-control input-underline input-lg f-15"
-                                            [pattern]="passwordPattern" placeholder="New password" title="Use 8 or more characters with a mix of letters, numbers & symbols"
-                                            name="npassword" [(ngModel)]="changePwd.npassword" #npassword="ngModel"
-                                            [required]="!isEditView">
+                                        <input type="password" class="form-control input-underline input-lg f-15" [pattern]="passwordPattern" placeholder="New password"
+                                            title="Use 8 or more characters with a mix of letters, numbers & symbols" name="npassword"
+                                            [(ngModel)]="changePwd.npassword" #npassword="ngModel" [required]="!isEditView">
                                         <div *ngIf="npassword.invalid && (npassword.touched || changePwd.submitted)">
                                             <p class="input-info error-message" *ngIf="npassword.errors.required">New Password
-                                                is
-                                                required</p>
+                                                is required
+                                            </p>
                                             <p class="input-info error-message" *ngIf="npassword.errors.pattern">Password
-                                                must
-                                                contain 8 or
-                                                more
-                                                characters with a mix of letters, numbers & symbols.</p>
+                                                must contain 8 or more characters with a mix of letters, numbers & symbols.</p>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label class="user_name f-15 f-weight">Confirm New Password</label>
-                                        <input type="password" class="form-control input-underline input-lg f-15" name="cpassword"
-                                            [(ngModel)]="changePwd.cpassword" placeholder="Confirm New Password"
-                                            #cpassword="ngModel" [required]="!isEditView">
+                                        <input type="password" class="form-control input-underline input-lg f-15" name="cpassword" [(ngModel)]="changePwd.cpassword"
+                                            placeholder="Confirm New Password" #cpassword="ngModel" [required]="!isEditView">
                                         <div *ngIf="(cpassword.touched || changePwd.submitted)">
                                             <p class="input-info error-message" *ngIf="changePwd.npassword && (changePwd.npassword !== changePwd.cpassword)">
                                                 Password and confirm password not matches.
@@ -200,7 +193,7 @@
                                     </div>
                                 </div>
                                 <div class="btn-submit">
-                                    <button class="btn btn-secondary send-code-btn update-btn "  type="submit">Update</button>
+                                    <button class="btn btn-secondary send-code-btn update-btn " type="submit">Update</button>
 
                                     <button class="btn btn-secondary send-code-btn  cancel-btn" (click)="cancel()" type="submit">Cancel</button>
                                 </div>
@@ -237,33 +230,42 @@
             <div class="col col-xl-12 col-lg-12 col-12">
                 <form role="form" #newAdminForm="ngForm" (ngSubmit)="newAdminForm.form.valid && newAdminSubmit()">
                     <div class="row row-input">
+                        <div class="col col-xl-8 col-lg-8 col-12">
+                            <p class="input-title">Full Name</p>
+                            <input type="text" class="form-control admin-input input-underline input-lg" name="fullname" #fullname="ngModel" [(ngModel)]="AdminModal.fullname"
+                                placeholder="" required>
 
-                        <div class="col col-xl-4 col-lg-4 col-12">
+                            <div *ngIf="fullname.invalid && (fullname.touched || newAdminForm.submitted)">
+                                <p class="input-info error-message" *ngIf="fullname.errors.required">Full Name is required
+                                </p>
+                            </div>
+                        </div>
+                        <!-- <div class="col col-xl-4 col-lg-4 col-12">
                             <p class="input-title">First Name</p>
-                            <input type="text" class="form-control input-underline input-lg" name="fname" #fname="ngModel"
-                                [(ngModel)]="AdminModal.fname" class="custome-input" placeholder="" required>
+                            <input type="text" class="form-control input-underline input-lg" name="fname" #fname="ngModel" [(ngModel)]="AdminModal.fname"
+                             placeholder="" required>
 
                             <div *ngIf="fname.invalid && (fname.touched || newAdminForm.submitted)">
-                                <p class="input-info error-message" *ngIf="fname.errors.required">First Name is
-                                    required</p>
+                                <p class="input-info error-message" *ngIf="fname.errors.required">First Name is required
+                                </p>
                             </div>
                         </div>
 
                         <div class="col col-xl-4 col-lg-4 col-12">
                             <p class="input-title">Last Name</p>
 
-                            <input type="text" class="form-control input-underline input-lg" name="lname" #lname="ngModel"
-                                [(ngModel)]="AdminModal.lname" class="custome-input" placeholder="" required>
+                            <input type="text" class="form-control input-underline input-lg" name="lname" #lname="ngModel" [(ngModel)]="AdminModal.lname"
+                             placeholder="" required>
                             <div *ngIf="lname.invalid && (lname.touched || newAdminForm.submitted)">
                                 <p class="input-info error-message" *ngIf="lname.errors.required">Last Name is required</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="row row-input">
                         <div class="col col-xl-4 col-lg-4 col-12">
                             <p class="input-title">Email</p>
-                            <input type="text" class="form-control input-underline input-lg" name="email" #email="ngModel"
-                                [pattern]="emailPattern" [(ngModel)]="AdminModal.email" placeholder="" required>
+                            <input type="text" class="form-control admin-input input-underline input-lg" name="email" #email="ngModel" [pattern]="emailPattern"
+                                [(ngModel)]="AdminModal.email" placeholder="" required>
                             <div *ngIf="email.invalid && (email.touched || newAdminForm.submitted)">
 
                                 <p class="input-info error-message" *ngIf="email.errors.required">Email is required</p>
@@ -273,20 +275,21 @@
                         </div>
                         <div class="col col-xl-4 col-lg-4 col-12">
                             <p class="input-title"> Phone Number</p>
-                            <input type="text" class="form-control input-underline input-lg" name="pnone" #phone="ngModel"
-                                [(ngModel)]="AdminModal.phone" class="custome-input" placeholder="" required>
-                            <div *ngIf="phone.invalid && (phone.touched || newAdminForm.submitted)">
+                            <input type="text" class="form-control admin-input input-underline input-lg" name="phone_number" #phone_number="ngModel"
+                                [(ngModel)]="AdminModal.phone_number" placeholder="" required>
+                            <div *ngIf="phone_number.invalid && (phone_number.touched || newAdminForm.submitted)">
 
-                                <p class="input-info error-message" *ngIf="phone.errors.required">Phone Number is
-                                    required</p>
+                                <p class="input-info error-message" *ngIf="phone_number.errors.required">Phone Number is
+                                    required
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="row row-input">
                         <div class="col col-xl-8 col-lg-8 col-12">
                             <p class="input-title">Address</p>
-                            <input type="text" class="form-control input-underline input-lg" name="address" #address="ngModel"
-                                [(ngModel)]="AdminModal.address" class="custome-input" placeholder="" required>
+                            <input type="text" class="form-control admin-input input-underline input-lg" name="address" #address="ngModel" [(ngModel)]="AdminModal.address"
+                                placeholder="" required>
                             <div *ngIf="address.invalid && (address.touched || newAdminForm.submitted)">
 
                                 <p class="input-info error-message" *ngIf="address.errors.required">Address is required</p>
@@ -331,24 +334,21 @@
                         <div class="col col-xl-4 col-lg-4 col-12">
                             <p class="input-title">Password</p>
 
-                            <input type="password" class="form-control input-underline input-lg" name="password"
-                                #password="ngModel" [pattern]="passwordPattern" [(ngModel)]="AdminModal.password"
-                                placeholder="" [required]="!isEditView">
+                            <input type="password" class="form-control admin-input input-underline input-lg" name="password" #password="ngModel" [pattern]="passwordPattern"
+                                [(ngModel)]="AdminModal.password" placeholder="" [required]="!isEditView">
                             <div *ngIf="password.invalid && (password.touched || newAdminForm.submitted)">
-                                <p class="input-info error-message" *ngIf="password.errors.required">Password is
-                                    required</p>
-                                <p class="input-info error-message" *ngIf="password.errors.pattern">Password must
-                                    contain 8 or
-                                    more
-                                    characters with a mix of letters, numbers & symbols.</p>
+                                <p class="input-info error-message" *ngIf="password.errors.required">Password is required
+                                </p>
+                                <p class="input-info error-message" *ngIf="password.errors.pattern">Password must contain
+                                    8 or more characters with a mix of letters, numbers & symbols.</p>
                             </div>
                         </div>
 
                         <div class="col col-xl-4 col-lg-4 col-12">
                             <p class="input-title">Confirm Password</p>
 
-                            <input type="password" class="form-control input-underline input-lg" name="cpassword"
-                                [(ngModel)]="AdminModal.cpassword" placeholder="" #cpassword="ngModel" [required]="!isEditView">
+                            <input type="password" class="form-control admin-input input-underline input-lg" name="cpassword" [(ngModel)]="AdminModal.cpassword"
+                                placeholder="" #cpassword="ngModel" [required]="!isEditView">
                             <div *ngIf="(cpassword.touched || AdminModal.submitted)">
                                 <p class="input-info error-message" *ngIf="AdminModal.password && (AdminModal.password !== AdminModal.cpassword)">
                                     Password and confirm password not matches.
@@ -456,4 +456,4 @@
         </div>
     </div> -->
 </ng-template>
-<app-common-dialog #listdialog (deleteEvent)="deleteUser($event)"></app-common-dialog>
+<!-- <app-common-dialog #listdialog (deleteEvent)="deleteUser($event)"></app-common-dialog> -->
