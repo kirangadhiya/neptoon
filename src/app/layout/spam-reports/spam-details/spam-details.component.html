@@ -26,67 +26,68 @@
                     </div> -->
                     <div [routerLink]="['/spam-reports/reports']">
 
-                        <p class="color-blue"> <img src="../../../../assets/images/dashboard/back-btn.png"> Back</p>
+                        <p class="color-blue back-spam"> <img src="../../../../assets/images/dashboard/back-btn.png"> Back</p>
                     </div>
 
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-12 main-col">
-                            <div class="col col-lg-10 col-xl-10 col-12 p-40">
+                            <div class="col col-lg-10 col-xl-10 col-12">
 
                                 <!-- <p class="f-13"><img src="../../../../assets//images/dashboard/user-img.png">UK Fashion Design<span>Posted
                                         by </span>Emma Edwards<span></span> </p>
                                 <p class="f-s-13 color-gray">40<span>mins ago</span></p> -->
-                                <div class="display-flex">
+                                <div class="user-profile">
                                     <div>
                                         <img src="../../../../assets//images/dashboard/user-img.png">
                                     </div>
-                                    <div>
-                                        <p class="f-13 m-p-0">UK
-                                            Fashion Design<span>Posted
-                                                by </span>Emma Edwards<span></span> </p>
-                                        <p class="f-s-13 color-gray m-l-15">40<span>mins ago</span></p>
+                                    <div class="user-name">
+                                        <p class="f-13 name"><span>UK Fashion Design</span> Posted by <span>Emma Edwards</span>
+                                        </p>
+                                        <p class="time">40 mins ago</p>
                                     </div>
 
 
                                 </div>
+                                <div class="spam-data">
+                                    <p class="f-13">What's the point of putting on makeup, a monkey is gonna stay monkey</p>
+                                    <img class="details-img img-width" src="../../../../assets//images/dashboard/user-details-img.jpg">
 
-                                <p class="f-13">What's the point of putting on makeup, a monkey is gonna stay monkey</p>
-                                <img class="details-img img-width" src="../../../../assets//images/dashboard/user-details-img.jpg">
 
 
+                                    <div class="row action-spam">
+                                        <div class="col col-lg-2">
+                                            <p class="comment-like">1000 <span class="color-blue">Likes</span></p>
+                                        </div>
+                                        <div class="col col-lg-3" (click)="comments()">
+                                            <p class="comment-like">5000 <span class="color-blue">Comments</span></p>
+                                        </div>
+                                        <div class=" col col-lg-2 ">
+                                            <p class="comment-like">200 <span class="color-blue">Shares</span></p>
+                                        </div>
+                                        <div class=" col col-lg-2 ">
 
-                                <div class="row">
-                                    <div class="col col-lg-2">
-                                        <p class="comment-like">1000 <span class="color-blue">Likes</span></p>
+                                        </div>
+                                        <div class=" col">
+                                            <p class="comment-spam-report text-right">20 <span>Report Spam
+                                                </span></p>
+                                        </div>
                                     </div>
-                                    <div class="col col-lg-3" (click)="comments()">
-                                        <p class="comment-like">5000 <span class="color-blue">Comments</span></p>
-                                    </div>
-                                    <div class=" col col-lg-2 ">
-                                        <p class="comment-like">200 <span class="color-blue">Shares</span></p>
-                                    </div>
-                                    <div class=" col col-lg-2 ">
+                                    <div class="row p-b-35">
+                                        <div class="col col-lg-2 col-xl-2 col-12 ">
+                                            <button class="f-s-13 btn-details h-30" btn secondary>Delete Post</button>
+                                        </div>
+                                        <div class="col col-lg-4 col-12">
+                                            <button class="f-s-13 btn-details h-30" btn secondary>Delete and Suspend User</button>
 
-                                    </div>
-                                    <div class=" col">
-                                        <p class="comment-like text-right">20 <span class="color-blue">Spam</span></p>
-                                    </div>
-                                </div>
-                                <div class="row p-b-35">
-                                    <div class="col col-lg-2 col-xl-2 col-12 ">
-                                        <button class="f-s-13 btn-details h-30" btn secondary>Delete Post</button>
-                                    </div>
-                                    <div class="col col-lg-4 col-12">
-                                        <button class="f-s-13 btn-details h-30" btn secondary>Delete and Suspend User</button>
+                                        </div>
+                                        <div class="col col-lg-4 col-12">
+                                            <button class="f-s-13 btn-details h-30 " btn secondary>Delete and Suspend Forum</button>
 
-                                    </div>
-                                    <div class="col col-lg-4 col-12">
-                                        <button class="f-s-13 btn-details h-30 " btn secondary>Delete and Suspend Forum</button>
+                                        </div>
+                                        <div class="col col-lg-2 col-12">
+                                            <button class="f-s-13 btn-spam h-30" btn secondary>Not Spam</button>
 
-                                    </div>
-                                    <div class="col col-lg-2 col-12">
-                                        <button class="f-s-13 btn-spam h-30" btn secondary>Not Spam</button>
-
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -110,22 +111,21 @@
         <div class="modal-body">
             <div class="row main-row">
                 <div class="col col-xl-12 col-lg-12 col-12">
-                    <div  *ngFor="let i of [1,2,3,4,5]">
-                    <div class="avaitar">
-                        <img class="h-w-30" src="../../../../assets/images/dashboard/profile_pic.png">
-                        <div>
-                            <P class="bold-font">Cecilie Jones</P>
+                    <div *ngFor="let i of [1,2,3,4,5]">
+                        <div class="avaitar">
+                            <img class="h-w-30" src="../../../../assets/images/dashboard/profile_pic.png">
+                            <div>
+                                <P class="bold-font">Cecilie Jones</P>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-10 p-l-30">
-                        <div class="f-14 m-w-54 box-border col-12">
-                            <p>It is Official wenger have resign. I will miss him after
-                                all those years at Arsenal </p>
-                            <p><img class="h-w-18" src="../../.././../assets//images/dashboard/star.png"> <span>1</span>
-                                <span class="span-text">2 replay</span></p>
-                        </div>
-                        <p class="f-comment">12:10 08/07/18</p>
-                        <!-- <div>
+                        <div class="col-10 p-l-30">
+                            <div class="f-14 m-w-54 box-border col-12">
+                                <p>It is Official wenger have resign. I will miss him after all those years at Arsenal </p>
+                                <p><img class="h-w-18" src="../../.././../assets//images/dashboard/star.png"> <span>1</span>
+                                    <span class="span-text">2 replay</span></p>
+                            </div>
+                            <p class="f-comment">12:10 08/07/18</p>
+                            <!-- <div>
                             <div class="avaitar p-l-30">
                                 <img class="h-w-30" src="../../../../assets/images/dashboard/profile_pic.png">
                                 <div>

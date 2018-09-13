@@ -16,14 +16,13 @@ export class SpamDetailsComponent implements OnInit {
     public alerts: Array<any> = [];
     public sliders: Array<any> = [];
     @ViewChild('commemts') comment;
-    modalRef:any;
+    modalRef: any;
 
     constructor(
-    private modalService: NgbModal,
+        private modalService: NgbModal,
     ) {
     }
     ngOnInit() {
-        console.log("dash");
 
     }
     comments() {

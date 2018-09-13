@@ -47,36 +47,74 @@ $topnav-background-color: #222;
         }
     }
 }
-.user-profile{
+
+.user-profile {
     width: 35px;
     height: 35px;
     border-radius: 50%;
 }
-.custome-profile-dropdown{
+
+.custome-profile-dropdown {
     left: auto !important;
     min-width: 329px !important;
 }
-.drop-bg{
+
+.drop-bg {
     background-color: white;
     border: 13px solid #f4f4f4;
     border-radius: 3px !important;
 }
-.border-radius{
-    border-radius: 10px;
+
+.border-radius {
+    border-radius: 5px;
     background-color: $white;
 }
-.bg-color{
-    background-color:#f4f4f4;
+
+.bg-color {
+    background-color: #f4f4f4;
 }
-.m-b-5{
-    margin-bottom: 5px;
+
+.m-b-5 {
+    margin-bottom: 12px;
 }
-.profile-text{
-    
+
+.profile-text {
     font-size: 14px;
-    /* align-items: center; */
     font-weight: 700;
+    line-height: 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    p {
+        margin: 0;
+    }
 }
-.p-l-10{
+
+.p-l-10 {
     padding-right: 10px;
+}
+
+.custome-search {
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    .input-div {
+        width: 60%;
+        position: relative;
+        input {
+            width: 100%;
+            border-radius: 30px;
+            height: 40px;
+            padding-left: 55px;
+            font-size: 15px;
+            font-weight: 700;
+            border-color: $lightgray;
+        }
+        img {
+            position: absolute;
+            top: 14px;
+            left: 22px;
+        }
+    }
 }

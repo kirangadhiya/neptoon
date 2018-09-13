@@ -22,45 +22,42 @@ $topnav-background-color: #222;
     -ms-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.19), 0 1px 2px rgba(0, 0, 0, 0.23);
-    // border-top: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.19), 0 1px 2px rgba(0, 0, 0, 0.23); // border-top: 1px solid rgba(255,255,255,0.3);
     .list-group {
-        .profile-img-div{
+        .profile-img-div {
             // padding: 47px 0 103px 0px;
             text-align: center;
             padding: 55px 0 39px 0;
-            .profile-text{
+            .profile-text {
                 letter-spacing: 0.3857144px;
                 font-weight: 700;
                 font-size: 18px;
                 color: $lightblack;
                 margin: 0px;
             }
-            .admin-text{
+            .admin-text {
                 letter-spacing: 0.3214287px;
                 font-size: 15px;
                 margin: 0px;
             }
-            .side-nav-text{
+            .side-nav-text {
                 padding: 30px 0 0 0;
                 text-align: center;
             }
-            .nav-router{
-                
-            }
+            .nav-router {}
         }
-        .profile-image{
+        .profile-image {
             height: 105px;
             width: 105px;
             border-radius: 50%;
-            
         }
         a.list-group-item {
             background: $white;
             border: 0;
             border-radius: 0;
-            color: #999;
+            color: $lightgray;
             text-decoration: none;
+            font-weight: 700;
             .fa {
                 margin-right: 10px;
             }
@@ -75,12 +72,10 @@ $topnav-background-color: #222;
         }
         .header-fields {
             padding-top: 10px;
-        
-            > .list-group-item:first-child {
+            >.list-group-item:first-child {
                 border-top: 1px solid rgba(255, 255, 255, 0.2);
             }
         }
-      
     }
     .sidebar-dropdown {
         *:focus {
@@ -163,17 +158,20 @@ $topnav-background-color: #222;
         }
     }
 }
+
 @media screen and (max-width: 992px) {
     .sidebar {
         top: 54px;
         left: 0px;
     }
 }
+
 @media print {
     .sidebar {
         display: none !important;
     }
 }
+
 @media (min-width: 992px) {
     .header-fields {
         display: none;
@@ -224,6 +222,6 @@ $topnav-background-color: #222;
     }
 }
 
-.sidebar-custome{
+.sidebar-custome {
     height: 100%;
 }

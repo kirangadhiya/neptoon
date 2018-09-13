@@ -13,7 +13,7 @@ export class DashboardComponent implements OnInit {
     public sliders: Array<any> = [];
 
     constructor(
-        public utilService:UtilService
+        public utilService: UtilService
     ) {
         this.sliders.push(
             {
@@ -56,8 +56,7 @@ export class DashboardComponent implements OnInit {
     }
 
     ngOnInit() {
-        console.log("dash");
-        
+
     }
 
     public closeAlert(alert: any) {

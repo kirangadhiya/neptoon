@@ -2,15 +2,14 @@
 .forum-details-page {
     .main-row {
         margin: 0;
-        padding: 24px;
         .activites-list {
-            padding-top: 175px;
+            padding-top: 150px;
         }
         .user-cover {
             width: 100%;
             img {
                 width: 100%;
-                height: 160px;
+                height: 190px;
             }
         }
         .inner-row {
@@ -199,8 +198,115 @@
                         .profile-post {
                             display: flex;
                             justify-content: center;
+                            .post-data {
+                                padding-top: 30px;
+                            }
                             .userprofile-detail {
                                 display: flex;
+                                .profile-picture {
+                                    img {
+                                        width: 50px;
+                                        height: 50px;
+                                    }
+                                }
+                                .profile-name {
+                                    padding-left: 15px;
+                                    padding-top: 10px;
+                                    .name {
+                                        font-size: 15px;
+                                        margin-bottom: 5px;
+                                        font-weight: 700;
+                                        color: $lightblack;
+                                        cursor: pointer;
+                                    }
+                                    .time {
+                                        color: $lightblack;
+                                        font-size: 14px;
+                                        font-weight: normal;
+                                        margin-bottom: 5px;
+                                    }
+                                }
+                            }
+                            .post-des {
+                                padding-left: 65px;
+                                font-size: 13px;
+                                font-weight: 600;
+                            }
+                            .main-content {
+                                justify-content: center;
+                                display: flex;
+                                .inside-content {
+                                    .post-img {
+                                        width: 100%;
+                                    }
+                                    .action-row {
+                                        padding-top: 10px;
+                                    }
+                                    .action-post {
+                                        font-size: 14px;
+                                        font-weight: 700;
+                                        color: $lightblack;
+                                        span {
+                                            color: $darkblue;
+                                        }
+                                    }
+                                    .spam-report {
+                                        text-align: right;
+                                        color: $lightred;
+                                        p {
+                                            font-size: 14px;
+                                            align-items: center;
+                                            display: flex;
+                                            justify-content: flex-end;
+                                            img {
+                                                padding-right: 8px;
+                                            }
+                                        }
+                                    }
+                                    .post-comments {
+                                        border-top: 1px solid $lightgray;
+                                        .comment-img {
+                                            display: flex;
+                                            align-items: center;
+                                            padding-top: 15px;
+                                            img {
+                                                width: 45px;
+                                                height: 45px;
+                                            }
+                                            p {
+                                                font-size: 15px;
+                                                margin-bottom: 5px;
+                                                font-weight: 700;
+                                                color: $lightblack;
+                                                padding-left: 15px;
+                                            }
+                                        }
+                                        .comment {
+                                            padding-left: 60px;
+                                            .comment-text {
+                                                font-size: 13px;
+                                                margin-bottom: 8px;
+                                                margin-top: -10px;
+                                                color: $lightblack;
+                                            }
+                                            .comment-like {
+                                                display: flex;
+                                                align-items: center;
+                                                img {
+                                                    width: 20px;
+                                                    height: 20px;
+                                                }
+                                                span {
+                                                    font-size: 12px;
+                                                    font-weight: 700;
+                                                    padding-left: 5px;
+                                                    padding-top: 4px;
+                                                    color: $darkyellow
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

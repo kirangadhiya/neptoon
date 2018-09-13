@@ -85,7 +85,9 @@
                                             <p>US</p>
                                         </td>
                                         <td>
-                                            <button class="btn secondary view-btn">View User</button>
+                                            <button class="btn secondary view-btn" [routerLink]="['/users/users-details']">View
+                                                User
+                                            </button>
                                             <!-- <button class="btn secondary details-btn" [routerLink]="['/users-details']">DETAILS</button> -->
                                         </td>
                                     </tr>
@@ -95,16 +97,52 @@
                             <div *ngIf="activities" class="activite-list-profile">
                                 <div class="row">
                                     <div class="col col-lg-12 col-xl-12 col-md-12 col-12 profile-post">
-                                        <div class="col col-lg-8 col-xl-8 col-md-8 col-12">
-                                            <!-- <div class="userprofile-detail">
-                                                <div>
+                                        <div class="col col-lg-9 col-xl-9 col-md-9 col-12 post-data">
+                                            <div class="userprofile-detail">
+                                                <div class="profile-picture">
                                                     <img src="assets/images/dashboard/profile_pic.png">
                                                 </div>
-                                                <div>
-                                                    <p>Emma Edwards</p>
-                                                    <p>4 mins ago</p>
+                                                <div class="profile-name">
+                                                    <p class="name" [routerLink]="['/users/users-details']">Emma Edwards</p>
+                                                    <p class="time">4 mins ago</p>
                                                 </div>
-                                            </div> -->
+                                            </div>
+                                            <p class="post-des">Is there a perfect goodbye" I just want to do as well as
+                                                i can" Wenger said</p>
+                                            <div class="main-content">
+                                                <div class="col col-lg-10 col-xl-10 col-md-10 col-12 inside-content">
+                                                    <img class="post-img" src="assets/images/dashboard/user-details-img.jpg">
+                                                    <div class="row action-row">
+                                                        <div class="col col-xl-2 col-lg-2 col-md-2 col-6">
+                                                            <p class="action-post">20 <span>Likes</span></p>
+                                                        </div>
+                                                        <div class="col col-xl-3 col-lg-3 col-md-3 col-6">
+                                                            <p class="action-post">08 <span>Comments</span></p>
+                                                        </div>
+                                                        <div class="col col-xl-3 col-lg-3 col-md-3 col-6">
+                                                            <p class="action-post">08 <span>Shares</span></p>
+                                                        </div>
+                                                        <div class="col col-xl-4 col-lg-4 col-md-4 col-6 spam-report">
+                                                            <p><img src="assets/images/dashboard/report_spam.png"> <span>30
+                                                                    Spam Reported</span></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="post-comments">
+                                                        <div class="comment-img">
+                                                            <img src="assets/images/dashboard/profile_pic.png">
+                                                            <p>Emma Edwards</p>
+                                                        </div>
+                                                        <div class="comment">
+                                                            <p class="comment-text">It is official wenger have resigned.
+                                                                I will miss him after all those years at Arsenal</p>
+                                                            <p class="comment-like">
+                                                                <img src="assets/images/dashboard/star.png">
+                                                                <span>2</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -115,4 +153,3 @@
             </div>
         </div>
     </div>
-</div>
