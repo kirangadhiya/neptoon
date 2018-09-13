@@ -1,65 +1,64 @@
 <div class="reports-page">
     <!-- <div>
         <p>REPORTS</p>
-    </div>
-    <div>
-        <div class="row">
-            <div class="col-lg-4">
-   
-            </div>
-        </div>
     </div> -->
+  
     <div class="row">
         <div class="col-lg-10 col-sm-12 report-card">
-            <p class="">REPORTS</p>
-            <!-- <div class="row">
-                <div class="col-lg-4 col-md-4 col-12 header">
-                       <p class="date">Select by date </p> 
-                        <input class="form-control  " placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model"
-                            ngbDatepicker #d="ngbDatepicker">
-                            <img class="" (click)="d.toggle()" src="../../../../assets//images/dashboard/calender.png">
-                </div>
-                <div class="col-lg-4 col-md-4 col-12 header">
-                        Sort<select class="select-class m-l-10">
-                                <option class="select-class" selected>Date</option>
-                                <option class="select-class">No of Reports</option>
-                                <option class="select-class">Post of shares</option>
-                            </select>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-12 header">
-                            <p>
-                                    1200000000
-                                </p>
-                                <p>
-                                    Reports
-                                </p>
-                        </div>
+            <!-- <div>
+
+                <p class="">REPORTS</p>
             </div> -->
-            <!-- <ul class="head-list">
-                <li class="date ">Select by date
-                    <input class="form-control form-date m-l-10" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model"
-                        ngbDatepicker #d="ngbDatepicker"> -->
-                    <!-- <input type="date" placeholder="/ / "> -->
-                    <!-- <img class="m-l-10" (click)="d.toggle()" src="../../../../assets//images/dashboard/calender.png">
-                </li>
-                <li class="date">Sort<select class="select-class m-l-10">
-                        <option class="select-class" selected>Date</option>
-                        <option class="select-class">No of Reports</option>
-                        <option class="select-class">Post of shares</option>
-                    </select></li>
-                <li>
-                    <div>
-                        <p>
-                            1200000000
-                        </p>
-                        <p>
-                            Reports
-                        </p>
+            <div class="col col-lg-2 text-header">
+                    <p class="m-0">REPORTS</p>
+                </div>
+
+            <div class="col-lg-12 col-md-12 col-12 row-section">
+                  
+                <div class="row top-card">
+                    <div class="col-lg-4 col-md-12 col-12">
+                        <div class="middle">
+                            <label class="label">Select by date</label>
+                            <input class="form-control form-date m-l-10 date-picker" placeholder="yyyy-mm-dd" name="dp"
+                                [(ngModel)]="model" (click)="d.toggle()" ngbDatepicker #d="ngbDatepicker">
+                            <img class="m-l-10" (click)="d.toggle()" src="../../../../assets//images/dashboard/calender.png">
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-12">
+                        <div class="row">
+                            <div class="middle">
+                                <label class="label">Sort</label>
+                                <select class="form-control select-input" name="roleId">
+                                    <option value="none">Date</option>
+                                    <option value="uk">No of Reports</option>
+                                    <option value="uk">Post of Shares</option>
+
+                                </select>
+                            </div>
+                        </div>
 
                     </div>
+                    <div class="col-lg-5 col-md-12 col-12">
+                        <div class="row">
 
-                </li>
-            </ul> -->
+                            <div class="col-lg-12 col-md-6 col-12">
+                                <div class="card">
+                                    <div>
+                                        <p>
+                                            1000000
+                                        </p>
+                                    </div>
+                                    <p class="margin_0">
+                                        No of Reports
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="reports-box">
                 <div class="row report-row" *ngFor="let i of [1,2,3,4]">
                     <div class="col-lg-4">
@@ -74,7 +73,7 @@
                         <p class="report-time-text">15 Shares</p>
                     </div>
                     <div class="col-lg-3">
-                            <button class="btn btn-secondary details-btn" [routerLink]="['/spam-reports/spam-details']" >DETAILS</button>
+                        <button class="btn btn-secondary details-btn" [routerLink]="['/spam-reports/spam-details']">DETAILS</button>
                     </div>
                 </div>
             </div>

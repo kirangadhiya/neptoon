@@ -103,26 +103,27 @@
                                 }
                             }
                             .suspend-btn {
-                                button {
+                                select{
                                     background-color: $white;
                                     box-shadow: none;
-                                    border: 1px solid $lightgray;
+                                    border: 1px solid $lightred;
                                     border-radius: 3px;
                                     font-size: 13px;
                                     padding: 6px 20px;
-                                    color: $lightgray;
+                                    color: $lightred;
                                     cursor: pointer;
+                                
                                 }
                             }
-                            .deactivate-btn {
+                           .deactivate-btn {
                                 button {
                                     background-color: $white;
                                     box-shadow: none;
-                                    border: 1px solid $lightgray;
+                                    border: 1px solid $lightred;
                                     border-radius: 3px;
                                     font-size: 13px;
                                     padding: 6px 20px;
-                                    color: $lightgray;
+                                    color: $lightred;
                                     cursor: pointer;
                                 }
                             }
@@ -206,4 +207,5 @@
             }
         }
     }
+    
 }

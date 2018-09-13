@@ -40,9 +40,14 @@
       font-size: 12px;
       font-weight: 700;
       }
-
+      .text-header{
+        padding: 0px;
+        margin: 0px;
+        font-size: 19px;
+    }
       .header-section{
         padding: 10px 0px;
+
         .active-button{
             background-color: #283593;
             border: 1px solid #283593;
@@ -51,6 +56,7 @@
             padding: 4px 20px;
             color: white;
             font-weight: 600;
+         
         }
         .normal-button{
             border: 1px solid $lightgray;
@@ -95,6 +101,9 @@
                 height: 30px;
                 font-size: 12px;
                 padding: 5px;
+                .select-selected {
+                    background-color: DodgerBlue;
+                  }
             }
         }
     }

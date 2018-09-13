@@ -4,6 +4,54 @@
 .reports-page{
     .report-card{
         padding: 20px 0 0 45px;
+        .text-header{
+            padding: 0px;
+            margin: 0px;
+            font-size: 19px;
+        }
+    }
+    .card{
+       
+        box-shadow: 0 1px 6px rgba(10, 10, 10, 0.64);
+        text-align: center;
+        font-size: 17px;
+        font-weight: 700;
+    }
+    .row-section{
+        padding: 10px 20px;
+        .button-section{
+            align-items: flex-end;
+            display: flex;
+        }
+        .top-card{
+            display: flex;
+            /* justify-content: center; */
+            align-items: flex-end;
+        }
+    }
+    .middle{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        .date-picker{
+            width: 50%;
+            height: 30px;
+            padding: 8px 12px;
+            font-size: 13px;
+            margin: 0px 10px;
+        }
+        .label{
+            color: gray;
+            font-size: 13px;
+            margin: 0;
+        }
+        .select-input{
+            width: 50%;
+            margin:0px 10px;
+            height: 30px;
+            font-size: 12px;
+            padding: 5px;
+        }
     }
     .header{
         display: flex;
@@ -90,5 +138,8 @@
      font-size: 12px;
      font-weight: 700;
      }
+    }
+    .m-0{
+        margin: 0px;
     }
 }

@@ -1,134 +1,143 @@
 <div class="user-details-page">
-        <div class="row main-row">
-            <div class="col col-xl-12 col-lg-12 col-12 main-content">
-                <div class="user-cover">
-                    <img src="assets/images/dashboard/profile_cover.png">
-                </div>
-                <div class="row inner-row profile-row">
-                    <div class="col col-lg-11 col-xl-11 col-12 main-col">
-                        <div class="row first-row">
-                            <div class="col col-xl-4 col-lg-4 col-6 profile-col">
-                                <img src="assets/images/dashboard/profile_pic.png">
-                                <p class="join-text">Joined Neptoon on 10/07/2018</p>
-                                <p class="total-frd">700 Friends</p>
-                                <p class="country">Country : <span>UK</span></p>
+    <div class="row main-row">
+        <div class="col col-xl-12 col-lg-12 col-12 main-content">
+            <div class="user-cover">
+                <img src="assets/images/dashboard/profile_cover.png">
+            </div>
+            <div class="row inner-row profile-row">
+                <div class="col col-lg-11 col-xl-11 col-12 main-col">
+                    <div class="row first-row">
+                        <div class="col col-xl-4 col-lg-4 col-6 profile-col">
+                            <img src="assets/images/dashboard/profile_pic.png">
+                            <p class="join-text">Joined Neptoon on 10/07/2018</p>
+                            <p class="total-frd">700 Friends</p>
+                            <p class="country">Country : <span>UK</span></p>
+                        </div>
+                        <div class="col col-xl-8 col-lg-8 col-6 detail-col">
+                            <div class="user-name">
+                                <p class="user-text">Angel Lewis</p>
+                                <p class="report">Times Reported : <span>8 times</span></p>
                             </div>
-                            <div class="col col-xl-8 col-lg-8 col-6 detail-col">
-                                <div class="user-name">
-                                    <p class="user-text">Angel Lewis</p>
-                                    <p class="report">Times Reported : <span>8 times</span></p>
-                                </div>
-                                <p class="title-content">About</p>
-                                <p class="about-text">I am a friendly fun loving person essy to get along with and passionate
-                                    towards success. Upcoming forex trader.</p>
-                                <p class="title-content">Interests</p>
-                                <p class="interest-text">Sports, Entertainment, Plitic</p>
-                                <p class="title-content">Contact</p>
-                                <p class="contact-text">
-                                    <span class="phone">Phone: 7567093476</span>
-                                    <span>Email: kirangadhiya.ibl@gmail.com</span>
-                                </p>
-                                <ul class="category-btn">
-                                    <li class="frd-btn" (click)="activemenu('frd')">
-                                        <button [class.active-btn]="Friendlist">Friends</button>
-                                    </li>
-                                    <li class=" forum-btn " (click)="activemenu( 'forum') ">
-                                        <button [class.active-btn]="Forumlist">Forums</button>
-                                    </li>
-                                    <li class=" activity-btn " (click)="activemenu( 'activity') ">
-                                        <button [class.active-btn]="Activitylog">Activity Log</button>
-                                    </li>
-                                    <li class=" suspend-btn ">
-                                        <button>Suspend</button>
-                                    </li>
-                                    <li class="deactivate-btn ">
-                                        <button>Deactivate</button>
-                                    </li>
-                                </ul>
-                            </div>
+                            <p class="title-content">About</p>
+                            <p class="about-text">I am a friendly fun loving person essy to get along with and
+                                passionate
+                                towards success. Upcoming forex trader.</p>
+                            <p class="title-content">Interests</p>
+                            <p class="interest-text">Sports, Entertainment, Plitic</p>
+                            <p class="title-content">Contact</p>
+                            <p class="contact-text">
+                                <span class="phone">Phone: 7567093476</span>
+                                <span>Email: kirangadhiya.ibl@gmail.com</span>
+                            </p>
+                            <ul class="category-btn">
+                                <li class="frd-btn" (click)="activemenu('frd')">
+                                    <button [class.active-btn]="Friendlist">Friends</button>
+                                </li>
+                                <li class=" forum-btn " (click)="activemenu( 'forum') ">
+                                    <button [class.active-btn]="Forumlist">Forums</button>
+                                </li>
+                                <li class=" activity-btn " (click)="activemenu( 'activity') ">
+                                    <button [class.active-btn]="Activitylog">Activity Log</button>
+                                </li>
+                                <li class="suspend-btn">
+                                    <select class=" " id="mysel" name="roleId">
+                                        <option value="none">Suspended</option>
+                                        <option value="none">24 hours</option>
+                                        <option value="uk">72 hours</option>
+                                        <option value="uk">30 days</option>
+                                        <option value="uk">90 days</option>
+                                    </select>
+
+
+                                </li>
+                                <li class="deactivate-btn ">
+                                    <button class="deactivate-btn ">Deactivate</button>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="row inner-row ">
-                    <div class="col col-lg-11 col-xl-11 col-12 main-col ">
-                        <p class="frd-count " *ngIf="Friendlist">Friends ( 700 )</p>
-                        <p class="frd-count " *ngIf="Forumlist">Forums (30)</p>
-                        <p class="frd-count " *ngIf="Activitylog">Activity Log</p>
-                        <div class="row second-row ">
-                            <div class="table-responsive tabel-overflow tabel-box">
-                                <table class="table" *ngIf="Friendlist">
-                                    <thead>
-                                        <tr class="tr-header-center">
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
-                                            <th>Country</th>
-                                            <th>View User</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="tr-body-center" *ngFor="let user of [0,1,2,3,4,5,6];let i=index;">
-                                            <td class="user-profile">
-                                                <img src="assets/images/dashboard/profile_pic.png">
-                                            </td>
-                                            <td>
-                                                <p class="user-name">Emma Edwards</p>
-    
-                                            </td>
-                                            <td>
-                                                <p>Common Friends <span class="Count">(30)</span></p>
-                                            </td>
-                                            <td>Common Forums <span class="Count">(30)</span></td>
-                                            <td>
-                                                <p>US</p>
-                                            </td>
-                                            <td>
-                                                <button class="btn secondary view-btn">View User</button>
-                                                <!-- <button class="btn secondary details-btn" [routerLink]="['/users-details']">DETAILS</button> -->
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-    
-    
-                                <table class="table" *ngIf="Forumlist">
-                                    <thead>
-                                        <tr class="tr-header-center">
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
-                                            <th>Country</th>
-                                            <th>View Forum</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="tr-body-center" *ngFor="let user of [0,1,2,3,4,5,6];let i=index;">
-                                            <td class="user-profile">
-                                                <img src="assets/images/dashboard/profile_pic.png">
-                                            </td>
-                                            <td>
-                                                <p class="user-name">Emma Edwards</p>
-    
-                                            </td>
-                                            <td>
-                                                <p>Menmbers <span class="Count">(30)</span></p>
-                                            </td>
-                                            <td>
-                                                <p>US</p>
-                                            </td>
-                                            <td>
-                                                <button class="btn secondary view-btn">View Forum</button>
-                                                <!-- <button class="btn secondary details-btn" [routerLink]="['/users-details']">DETAILS</button> -->
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-    
-    
-                                <table class="table activity-table" *ngIf="Activitylog">
-                                    <thead>
-                                        <!-- <tr class="tr-header-center">
+            </div>
+            <div class="row inner-row ">
+                <div class="col col-lg-11 col-xl-11 col-12 main-col ">
+                    <p class="frd-count " *ngIf="Friendlist">Friends ( 700 )</p>
+                    <p class="frd-count " *ngIf="Forumlist">Forums (30)</p>
+                    <p class="frd-count " *ngIf="Activitylog">Activity Log</p>
+                    <div class="row second-row ">
+                        <div class="table-responsive tabel-overflow tabel-box">
+                            <table class="table" *ngIf="Friendlist">
+                                <thead>
+                                    <tr class="tr-header-center">
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th>Country</th>
+                                        <th>View User</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="tr-body-center" *ngFor="let user of [0,1,2,3,4,5,6];let i=index;">
+                                        <td class="user-profile">
+                                            <img src="assets/images/dashboard/profile_pic.png">
+                                        </td>
+                                        <td>
+                                            <p class="user-name">Emma Edwards</p>
+
+                                        </td>
+                                        <td>
+                                            <p>Common Friends <span class="Count">(30)</span></p>
+                                        </td>
+                                        <td>Common Forums <span class="Count">(30)</span></td>
+                                        <td>
+                                            <p>US</p>
+                                        </td>
+                                        <td>
+                                            <button class="btn secondary view-btn">View User</button>
+                                            <!-- <button class="btn secondary details-btn" [routerLink]="['/users-details']">DETAILS</button> -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <table class="table" *ngIf="Forumlist">
+                                <thead>
+                                    <tr class="tr-header-center">
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th>Country</th>
+                                        <th>View Forum</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="tr-body-center" *ngFor="let user of [0,1,2,3,4,5,6];let i=index;">
+                                        <td class="user-profile">
+                                            <img src="assets/images/dashboard/profile_pic.png">
+                                        </td>
+                                        <td>
+                                            <p class="user-name">Emma Edwards</p>
+
+                                        </td>
+                                        <td>
+                                            <p>Menmbers <span class="Count">(30)</span></p>
+                                        </td>
+                                        <td>
+                                            <p>US</p>
+                                        </td>
+                                        <td>
+                                            <button class="btn secondary view-btn">View Forum</button>
+                                            <!-- <button class="btn secondary details-btn" [routerLink]="['/users-details']">DETAILS</button> -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <table class="table activity-table" *ngIf="Activitylog">
+                                <thead>
+                                    <!-- <tr class="tr-header-center">
                                             <th></th>
                                             <th></th>
                                             <th></th>
@@ -136,29 +145,29 @@
                                             <th>Country</th>
                                             <th>View User</th>
                                         </tr> -->
-                                    </thead>
-                                    <tbody>
-                                        <tr class="tr-body-center" *ngFor="let user of [0,1,2,3,4,5,6];let i=index;">
-                                            <td>
-                                                <p>July 10</p>
-                                            </td>
-                                            <td class="user-profile-activity">
-                                                <img src="assets/images/dashboard/profile_pic.png">
-                                            </td>
-                                            <td>
-                                                <p class="user-name">Emma Edwards</p>
-                                                <p class="forum-date">July 10, 2018 3:36PM</p>
-                                            </td>
-                                            <td>
-                                                <img src="assets/images/dashboard/profile_pic.png">
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                                </thead>
+                                <tbody>
+                                    <tr class="tr-body-center" *ngFor="let user of [0,1,2,3,4,5,6];let i=index;">
+                                        <td>
+                                            <p>July 10</p>
+                                        </td>
+                                        <td class="user-profile-activity">
+                                            <img src="assets/images/dashboard/profile_pic.png">
+                                        </td>
+                                        <td>
+                                            <p class="user-name">Emma Edwards</p>
+                                            <p class="forum-date">July 10, 2018 3:36PM</p>
+                                        </td>
+                                        <td>
+                                            <img src="assets/images/dashboard/profile_pic.png">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
