@@ -59,7 +59,7 @@ export let TeachersMenuList = [
         title: 'SPAM REPORTS'
     },
     {
-        link: '/users-list',
+        link: '/users',
         icon: 'users.png',
         title: 'USERS'
     },

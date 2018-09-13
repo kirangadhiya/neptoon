@@ -19,7 +19,7 @@ export class AuthenticationService {
         return this.commonApiService.post('auth/verifyotp', data);
     }
     public passwordreset(data: any) {
-        return this.commonApiService.post('users/resetpassword', data);
+        return this.commonApiService.post('auth/resetpassword', data);
     }
     public logout() {
         return this.commonApiService.get('auth/logout');

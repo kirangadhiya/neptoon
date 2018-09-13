@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
                 }, 500);
             }
             else {
-                this.isLoading = true;
+                this.isLoading = false;
                 this._utilService.showErrorCall(res.message);
             }
         }, err => {
